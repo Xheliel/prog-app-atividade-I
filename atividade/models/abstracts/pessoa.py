@@ -12,11 +12,11 @@ class Pessoa(ABC):
 
     def __str__(self) -> str:
         return (
-            f"Pessoa: "
+            f"\nDADOS\n "
             f"\nId: {self.id}"
             f"\nNome: {self.nome}"
             f"\nIdade: {self.idade}"
             f"\nTelefone: {self.telefone}"
             f"\nE-mail: {self.email}"
-            f"\n\nEndereço: {self.endereco}"
+            f"\n\nENDEREÇO\n {self.endereco}"
         )

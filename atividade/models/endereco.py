@@ -17,5 +17,5 @@ class Endereco:
             f"\nCEP: {self.cep}"
             f"\nCidade: {self.cidade}"
             f"\nEstado: {self.uf.nome}"
-            f"\nSigla: {self.uf.sigla}"
+            f"\nSigla: {self.uf.sigla}\n"
         )
