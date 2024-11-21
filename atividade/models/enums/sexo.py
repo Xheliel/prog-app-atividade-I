@@ -8,4 +8,3 @@ class Sexo(Enum):
         self.nome = nome
         self.sigla = sigla
 
-print(Sexo.MASCULINO)
