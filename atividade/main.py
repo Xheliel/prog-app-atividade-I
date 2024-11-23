@@ -1,5 +1,6 @@
 from models.endereco import Endereco
 from models.enums.estado_civil import EstadoCivil
+from models.enums.setor import Setor
 from models.enums.sexo import Sexo
 from models.enums.unidade_federal import UnidadeFederativa
 from models.abstracts.juridica import Juridico
@@ -7,6 +8,10 @@ from models.prestacao_servico import PrestacaoServico
 from models.fornecedor import Fornecedor
 from models.abstracts.fisica import Fisica
 from models.cliente import Cliente
+from models.abstracts.funcionario import Funcionario
+from models.engenheiro import Engenheiro
+from models.medico import Medico
+from models.juridico import Juiz
 import os
 
 os.system("cls")
@@ -51,7 +56,8 @@ fisica1 = Fisica(
     "XXXXX@XXXXX.XXX",
     endereco1,
 )
-cliente1 = Cliente(15,
+cliente1 = Cliente(
+    15,
     Sexo.MASCULINO,
     "21/08/2005",
     EstadoCivil.SOLTEIRO,
@@ -62,5 +68,71 @@ cliente1 = Cliente(15,
     "XXXXX@XXXXX.XXX",
     endereco1,
 )
-
-print(fisica1)
+funcionario1 = Funcionario(
+    "XXX.XXX.XXX-XX",
+    "XX.XXX.XXX.XXX",
+    "XXXXXX",
+    Setor.ENGENHARIA,
+    3.500,
+    Sexo.MASCULINO,
+    "21/08/2005",
+    EstadoCivil.SOLTEIRO,
+    1,
+    "XXXXXXXX",
+    18,
+    "XX XXXXX XXXX",
+    "XXXXX@XXXXX.XXX",
+    endereco1,
+)
+engenheiro1 = Engenheiro(
+    "XXXXX",
+    "XXX.XXX.XXX-XX",
+    "XX.XXX.XXX.XXX",
+    "XXXXXX",
+    Setor.ENGENHARIA,
+    3.500,
+    Sexo.MASCULINO,
+    "21/08/2005",
+    EstadoCivil.SOLTEIRO,
+    1,
+    "XXXXXXXX",
+    18,
+    "XX XXXXX XXXX",
+    "XXXXX@XXXXX.XXX",
+    endereco1,
+)
+medico1 = Medico(
+    "XXXXX",
+    "XXX.XXX.XXX-XX",
+    "XX.XXX.XXX.XXX",
+    "XXXXXX",
+    Setor.ENGENHARIA,
+    3.500,
+    Sexo.MASCULINO,
+    "21/08/2005",
+    EstadoCivil.SOLTEIRO,
+    1,
+    "XXXXXXXX",
+    18,
+    "XX XXXXX XXXX",
+    "XXXXX@XXXXX.XXX",
+    endereco1,
+)
+juiz1 = Juiz(
+    "XXXXX",
+    "XXX.XXX.XXX-XX",
+    "XX.XXX.XXX.XXX",
+    "XXXXXX",
+    Setor.ENGENHARIA,
+    3.500,
+    Sexo.MASCULINO,
+    "21/08/2005",
+    EstadoCivil.SOLTEIRO,
+    1,
+    "XXXXXXXX",
+    18,
+    "XX XXXXX XXXX",
+    "XXXXX@XXXXX.XXX",
+    endereco1,
+)
+print(engenheiro1)

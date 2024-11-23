@@ -1,8 +1,8 @@
 from abc import ABC
 from models.abstracts.fisica import Fisica
-from enums.setor import Setor
-from enums.sexo import Sexo
-from enums.estado_civil import EstadoCivil
+from models.enums.setor import Setor
+from models.enums.sexo import Sexo
+from models.enums.estado_civil import EstadoCivil
 from models.endereco import Endereco
 
 class Funcionario(Fisica, ABC):
@@ -15,11 +15,11 @@ class Funcionario(Fisica, ABC):
         self.salario = salario
 
     def __str__(self):
-        return {
+        return (
             f"\n{super().__str__()}\n"
             f"\nCPF: {self.cpf}"
             f"\nRG: {self.rg}"
             f"\nMatrícula: {self.matricula}"
-            f"\nSetor: {self.setor}"
-            f"\nSalário: {self.salario}"
-        }
+            f"\nSetor: {self.setor.value}"
+            f"\nSalário: {self.salario:.3f}"
+        )
